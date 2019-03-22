@@ -1,4 +1,4 @@
-package cn.zqtao.code.leetcode;
+package cn.zqtao.code.leetcode.array;
 
 import java.util.HashMap;
 import java.util.Map;
