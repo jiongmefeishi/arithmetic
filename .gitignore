@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 .idea/compiler.xml
 .idea/description.html
 .idea/encodings.xml
@@ -32,3 +33,5 @@ out/production/arithmetic/cn/zqtao/code/leetcode/string/ReverseNum.class
 out/production/arithmetic/cn/zqtao/code/leetcode/string/StrToNum.class
 out/production/arithmetic/cn/zqtao/code/leetcode/sort/BubbleSort.class
 out/production/arithmetic/cn/zqtao/code/leetcode/sort/SelectionSort.class
+=======
+>>>>>>> 30082f36f1a4c79c3345b45ef555214981d36039
