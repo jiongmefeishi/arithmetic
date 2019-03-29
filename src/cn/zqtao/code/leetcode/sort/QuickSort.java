@@ -84,7 +84,7 @@ public class QuickSort {
      * 分治法的基本思想
      *     　分治法的基本思想是：将原问题分解为若干个规模更小但结构与原问题相似的子问题。递归地解这些子问题，然后将这些子问题的解组合为原问题的解。
      *
-     *     时间复杂度：快速排序具有最好的平均性能（average behavior），但最坏性能（worst case behavior）和插入排序
+     *     时间复杂度：快速排序具有最好的平均性能（average behavior） 只有 O(nlogn)，但最坏性能（worst case behavior）和插入排序
      * 相同，也是O(n^2)
      * @param arr
      * @param in_start
