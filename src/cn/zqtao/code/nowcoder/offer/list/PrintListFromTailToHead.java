@@ -25,7 +25,6 @@ public class PrintListFromTailToHead {
         while (!stack.isEmpty()){
             res.add(stack.pop());
         }
-
         return res;
     }
 
