@@ -1,7 +1,5 @@
 package cn.zqtao.code.nowcoder.offer.String;
 
-import java.util.Arrays;
-
 /**
  * @auther: zqtao
  * @description: 替换空格
