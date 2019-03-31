@@ -19,7 +19,6 @@ public class ArrayFindTargetNum {
 
         System.out.println(Find(6, arr));
 //        System.out.println(Find(13, arr));
-
     }
 
     public static boolean Find(int target, int[][] array) {
