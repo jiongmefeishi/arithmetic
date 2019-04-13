@@ -31,6 +31,22 @@ public class LevelOrder {
 
     /**
      * 使用队列保证顺序
+     *
+     *
+     *     3
+     *    / \
+     *   9  20
+     *     /  \
+     *    15   7
+     *
+     *    入队 and 出队顺序
+     *    队列：3          3  入
+     *    队列：20 9       3  出     9 入     20 入
+     *    队列：20         9  出
+     *    队列：7 15       20 出     15入     7 入
+     *    队列：7          15 出
+     *    队列：           7  出
+     *
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
         if(root == null) return new ArrayList<>();
