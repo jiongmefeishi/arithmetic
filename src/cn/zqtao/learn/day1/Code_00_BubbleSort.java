@@ -2,13 +2,15 @@ package cn.zqtao.learn.day1;
 
 import java.util.Arrays;
 
+import static cn.zqtao.learn.model.SortModel.*;
+
 /**
  * @auther: zqtao
  * @description: 冒泡排序（工程基本不用） - 小到大
  * 每次相邻的两个数进行比较，然后交换（需要时交换），每一趟都找到了当前样本中的最大数
- * @version: 1.0
  */
 public class Code_00_BubbleSort {
+
 
     // 排序
     public static void bubbleSort(int[] arr) {
@@ -22,8 +24,6 @@ public class Code_00_BubbleSort {
             }
         }
 
-        // 打印结果
-        System.out.println(Arrays.toString(arr));
     }
 
     // 交换
@@ -36,12 +36,25 @@ public class Code_00_BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5, 32, 8, 1, 9, 66};
-        bubbleSort(arr);
+        // 测试次数
+        int testTime = 50000;
+        int maxSize = 10;
+        int maxValue = 100;
 
-        /*
-         * 时间复杂度 O（N * N）
-         * 空间复杂度 O(1)  只涉及到了tmp 临时变量
-         */
+        for (int i = 0; i < testTime; i++) {
+            int[] randomArray = generateRandomArray(maxSize, maxValue);
+            int[] arr1 = copyArray(randomArray);
+            int[] arr2 = copyArray(randomArray);
+
+            bubbleSort(arr1);
+            comparator(arr2);
+
+            if (!isEqual(arr1, arr2)) {
+                // 错误打印出错是的数据样本
+                System.out.println("出错: " + Arrays.toString(randomArray));
+                break;
+            }
+        }
     }
+
 }
