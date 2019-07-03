@@ -6,7 +6,18 @@ import java.util.Arrays;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 小和问题
+ * <p>
+ * 小和问题
+ * 在一个数组中，每一个数左边比当前数小的数累加起来，叫做这个数组的小和。求一个数组 的小和。
+ * 例子：
+ * [1,3,4,2,5]
+ * 1左边比1小的数，没有；
+ * 3左边比3小的数，1；
+ * 4左边比4小的数，1、3；
+ * 2左边比2小的数，1；
+ * 5左边比5小的数，1、3、4、2；
+ * 所以小和为1+1+3+1+1+3+4+2=16
  * @version: 1.0
  */
 public class Code_04_SmallSum {
@@ -24,7 +35,7 @@ public class Code_04_SmallSum {
         return mergesort(arr, L, mid) +
                 mergesort(arr, mid + 1, R) +
                 merge(arr, L, mid, R);
-        // 返回左边结果 + 右边结果 + 合并后结果
+        //左边产生的小和+右边产生的小和+合并产生的小和就是整个数组的小和
     }
 
     public static int merge(int[] arr, int L, int mid, int R) {
