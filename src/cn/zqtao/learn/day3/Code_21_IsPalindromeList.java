@@ -100,7 +100,7 @@ public class Code_21_IsPalindromeList {
 
 
         help = n1; // 记录最后一个节点
-        n2 = head; // n2 指向违反转链表的头结点
+        n2 = head; // n2 指向左链表的头结点
 
         boolean res = true;
         while (n1 != null && n2 != null){

@@ -55,7 +55,6 @@ public class Code_23_CopyListWithRandom {
         return map.get(head);
     }
 
-    // 05
     public static Node copyListWithRand2(Node head) {
         if (head == null) return head;
         Node cur = head;
