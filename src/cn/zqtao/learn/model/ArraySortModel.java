@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @description: 排序随机样本产生器模型
  * @version: 1.0
  */
-public class SortModel {
+public class ArraySortModel {
     // for test : 一个绝对正确的排序方法 --> 这里使用Java自带方法
     public static void comparator(int[] arr) {
         Arrays.sort(arr);

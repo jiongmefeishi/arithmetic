@@ -1,6 +1,6 @@
 package cn.zqtao.learn.day2;
 
-import cn.zqtao.learn.model.SortModel;
+import cn.zqtao.learn.model.ArraySortModel;
 
 import java.util.Arrays;
 
@@ -104,10 +104,10 @@ public class Code_10_MaxGap {
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
             int[] randomArr = generateRandomArray(maxSize, maxValue);
-            int[] arr1 = SortModel.copyArray(randomArr);
-            int[] arr2 = SortModel.copyArray(arr1);
+            int[] arr1 = ArraySortModel.copyArray(randomArr);
+            int[] arr2 = ArraySortModel.copyArray(arr1);
             if (maxGap(arr1) != comparator(arr2)) {
-                if (!SortModel.isEqual(arr1, arr2)) {
+                if (!ArraySortModel.isEqual(arr1, arr2)) {
                     succeed = false;
                     System.out.println("错误: " + Arrays.toString(randomArr));
                     System.out.println("待测方法结果：" + Arrays.toString(arr1));

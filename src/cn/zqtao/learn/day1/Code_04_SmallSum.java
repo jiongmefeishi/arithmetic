@@ -1,6 +1,6 @@
 package cn.zqtao.learn.day1;
 
-import cn.zqtao.learn.model.SortModel;
+import cn.zqtao.learn.model.ArraySortModel;
 
 import java.util.Arrays;
 
@@ -89,10 +89,10 @@ public class Code_04_SmallSum {
         int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int[] randomArr = SortModel.generateRandomArray(maxSize, maxValue);
-            int[] arr1 = SortModel.copyArray(randomArr);
-            int[] arr2 = SortModel.copyArray(randomArr);
-            if (!SortModel.isEqual(arr1, arr2)) {
+            int[] randomArr = ArraySortModel.generateRandomArray(maxSize, maxValue);
+            int[] arr1 = ArraySortModel.copyArray(randomArr);
+            int[] arr2 = ArraySortModel.copyArray(randomArr);
+            if (!ArraySortModel.isEqual(arr1, arr2)) {
                 succeed = false;
                 System.out.println("错误: " + Arrays.toString(randomArr));
                 System.out.println("待测方法结果：" + Arrays.toString(arr1));

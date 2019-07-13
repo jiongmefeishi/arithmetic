@@ -1,6 +1,6 @@
 package cn.zqtao.learn.day1;
 
-import cn.zqtao.learn.model.SortModel;
+import cn.zqtao.learn.model.ArraySortModel;
 
 import java.util.Arrays;
 
@@ -56,14 +56,14 @@ public class Code_01_SelectionSort {
         int maxValue = 100;
 
         for (int i = 0; i < testTime; i++) {
-            int[] randomArr = SortModel.generateRandomArray(maxSize, maxValue);
-            int[] arr1 = SortModel.copyArray(randomArr);
-            int[] arr2 = SortModel.copyArray(randomArr);
+            int[] randomArr = ArraySortModel.generateRandomArray(maxSize, maxValue);
+            int[] arr1 = ArraySortModel.copyArray(randomArr);
+            int[] arr2 = ArraySortModel.copyArray(randomArr);
 
             selectionSort(arr1);
-            SortModel.comparator(arr2);
+            ArraySortModel.comparator(arr2);
 
-            if (!SortModel.isEqual(arr1, arr2)){
+            if (!ArraySortModel.isEqual(arr1, arr2)){
                 System.out.println("错误: " + Arrays.toString(randomArr));
                 break;
             }

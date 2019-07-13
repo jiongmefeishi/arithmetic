@@ -2,7 +2,7 @@ package cn.zqtao.learn.day1;
 
 import java.util.Arrays;
 
-import static cn.zqtao.learn.model.SortModel.*;
+import static cn.zqtao.learn.model.ArraySortModel.*;
 
 /**
  * @auther: zqtao
