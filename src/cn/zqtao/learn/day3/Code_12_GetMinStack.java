@@ -1,7 +1,5 @@
 package cn.zqtao.learn.day3;
 
-import org.omg.CORBA.INTERNAL;
-
 import java.util.Stack;
 
 /**
