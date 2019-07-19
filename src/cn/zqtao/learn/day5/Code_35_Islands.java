@@ -2,7 +2,23 @@ package cn.zqtao.learn.day5;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 岛问题
+ * 一个矩阵中只有0和1两种值，
+ * 每个位置都可以和自己的上、下、左、右 四个位置相连，
+ * 如果有一片1连在一起，这个部分叫做一个岛，
+ *
+ * 求一个 矩阵中有多少个岛？
+ * 举例：
+ *
+ * 0 0 1 0 1 0
+ *
+ * 1 1 1 0 1 0
+ *
+ * 1 0 0 1 0 0
+ *
+ * 0 0 0 0 0 0
+ *
+ * 这个矩阵中有三个岛。
  * @version: 1.0
  */
 public class Code_35_Islands {
@@ -24,7 +40,6 @@ public class Code_35_Islands {
                 }
             }
         }
-
         return res;
     }
 
@@ -45,16 +60,13 @@ public class Code_35_Islands {
      * @param c 矩阵列数
      */
     public static void infect(int[][] m, int i, int j, int r, int c){
-//        if (i < 0 || i >= r || j < 0 || j >= c // 坐标不越界
-//                || m[i][j] != 1 // 当前点0或2，不是1
-//        ){
-//            return; // 不需要感染
-//        }
-
-        if (i < 0 || i >= r || j < 0 || j >= c || m[i][j] != 1){
-            return;
+        if (i < 0 || i >= r || j < 0 || j >= c // 坐标不越界
+                || m[i][j] != 1 // 当前点0或2，不是1
+        ){
+            return; // 不需要感染
         }
-        m[i][j] = 2;
+
+        m[i][j] = 2; // 感染当前点
 
         infect(m, i + 1, j, r, c);
         infect(m, i - 1, j, r, c);
@@ -80,7 +92,5 @@ public class Code_35_Islands {
                 { 0, 0, 0, 0, 1, 1, 1, 0, 0 },
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, };
         System.out.println(countIslands(m2));
-
     }
-
 }
