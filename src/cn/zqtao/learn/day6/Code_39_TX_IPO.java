@@ -30,7 +30,7 @@ import java.util.PriorityQueue;
  * 每次从可选择的项目中，选取花费最小的几个；从这几个中选取收益最高的项目。
  * @version: 1.0
  */
-public class Code_39_IPO {
+public class Code_39_TX_IPO {
 
     // 构建项目数据结构
     public static class Node{
