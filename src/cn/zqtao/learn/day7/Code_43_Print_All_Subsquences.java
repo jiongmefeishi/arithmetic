@@ -2,7 +2,7 @@ package cn.zqtao.learn.day7;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 打印所有的子序列
  * @version: 1.0
  */
 public class Code_43_Print_All_Subsquences {

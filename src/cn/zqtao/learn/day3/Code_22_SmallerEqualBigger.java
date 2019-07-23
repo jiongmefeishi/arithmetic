@@ -36,7 +36,7 @@ public class Code_22_SmallerEqualBigger {
             this.value = data;
         }
     }
-    // 43  58 09
+
     // 类似荷兰国旗问题，这里使用O（N）的空间复杂度来转换为数组，进行荷兰国旗问题解决，最后回写到原链
     public static Node listPartition1(Node head, int pivot) {
         if (head == null) {

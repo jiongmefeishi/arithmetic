@@ -2,7 +2,7 @@ package cn.zqtao.learn.day7;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 牛生育问题
  * @version: 1.0
  */
 public class Code_44_CowNum {

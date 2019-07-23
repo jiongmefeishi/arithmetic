@@ -4,7 +4,7 @@ import cn.zqtao.learn.model.MatrixModel;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 最短路径
  * @version: 1.0
  */
 public class Code_45_2_dp_MinPath {
