@@ -2,7 +2,7 @@ package cn.zqtao.leetcode.day1;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 链表深度拷贝
  * @version: 1.0
  */
 public class LeetCode_05_CopyListWithRandom {

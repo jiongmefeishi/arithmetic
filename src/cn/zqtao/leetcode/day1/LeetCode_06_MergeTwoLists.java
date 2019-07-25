@@ -1,12 +1,8 @@
 package cn.zqtao.leetcode.day1;
 
-import com.sun.org.apache.regexp.internal.RE;
-
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-
 /**
  * @auther: zqtao
- * @description:
+ * @description: 合并两个有序链表
  * @version: 1.0
  */
 public class LeetCode_06_MergeTwoLists {
@@ -71,10 +67,6 @@ public class LeetCode_06_MergeTwoLists {
 
         printList(head);
         printList(h2);
-
         printList(node);
-
-
-
     }
 }

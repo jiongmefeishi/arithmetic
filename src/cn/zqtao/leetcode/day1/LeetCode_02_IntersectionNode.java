@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 两个单链表相交
  * @version: 1.0
  */
 public class LeetCode_02_IntersectionNode {

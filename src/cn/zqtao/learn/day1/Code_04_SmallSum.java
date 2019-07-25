@@ -59,7 +59,7 @@ public class Code_04_SmallSum {
             help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
         }
 
-        while (p1 <= L)
+        while (p1 <= mid)
             help[i++] = arr[p1++];
         while (p2 <= R)
             help[i++] = arr[p2++];

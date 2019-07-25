@@ -45,7 +45,7 @@ public class Code_05_InvertedNum {
             help[i++] = arr[p1] > arr[p2] ? arr[p1++] : arr[p2++];
         }
 
-        while (p1 <= L)
+        while (p1 <= mid)
             help[i++] = arr[p1++];
         while (p2 <= R)
             help[i++] = arr[p2++];
@@ -57,14 +57,17 @@ public class Code_05_InvertedNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
-            String[] str = sc.nextLine().split(",");
+            String[] str = sc.nextLine().split(" ");
             int[] num = new int[str.length];
             for (int i = 0; i < str.length; i++) {
                 num[i] = Integer.parseInt(str[i]);
             }
+            System.out.println(Arrays.toString(num));
             invertedNum(num);
+            System.out.println(Arrays.toString(num));
         }
         sc.close();
+
     }
 
 }

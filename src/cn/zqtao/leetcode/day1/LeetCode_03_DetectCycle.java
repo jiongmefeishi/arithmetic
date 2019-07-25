@@ -2,7 +2,7 @@ package cn.zqtao.leetcode.day1;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 链表是否有环
  * @version: 1.0
  */
 public class LeetCode_03_DetectCycle {
