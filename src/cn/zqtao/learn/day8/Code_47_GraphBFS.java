@@ -1,5 +1,9 @@
 package cn.zqtao.learn.day8;
 
+import cn.zqtao.learn.day8.graph.Graph;
+import cn.zqtao.learn.day8.graph.GraphGenerator;
+import cn.zqtao.learn.day8.graph.Node;
+
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -9,7 +13,7 @@ import java.util.Queue;
  * @description: 宽度优先遍历
  * @version: 1.0
  */
-public class GraphBFS {
+public class Code_47_GraphBFS {
     public static void bfs(Node node) {
         if (node == null) return;
 
@@ -32,5 +36,21 @@ public class GraphBFS {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        // {from, to, weight}
+        Integer[][] matrix = {
+                {1, 2, 3},
+                {1, 3, 4},
+                {1, 4, 2},
+                {2, 7, 1},
+                {3, 5, 5},
+                {4, 6, 1}
+        };
+
+        Graph graph = GraphGenerator.createGraph(matrix);
+        bfs(graph.nodes.get(1));
+        // 1 2 3 4 7 5 6
     }
 }

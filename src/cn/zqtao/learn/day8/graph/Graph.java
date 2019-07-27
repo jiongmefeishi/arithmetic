@@ -1,4 +1,4 @@
-package cn.zqtao.learn.day8;
+package cn.zqtao.learn.day8.graph;
 
 import java.util.HashMap;
 import java.util.HashSet;
