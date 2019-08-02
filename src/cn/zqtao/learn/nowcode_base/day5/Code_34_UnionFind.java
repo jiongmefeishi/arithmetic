@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * @auther: zqtao
  * @description: 并查集
+ * 合并和查询的复杂度平均复杂度接近是O(1)
  * @version: 1.0
  */
 public class Code_34_UnionFind {
