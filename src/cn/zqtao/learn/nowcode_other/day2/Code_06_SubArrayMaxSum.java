@@ -18,7 +18,8 @@ public class Code_06_SubArrayMaxSum {
         for (int i = 0; i < arr.length; i++) {
             cur += arr[i];
             max = Math.max(max, cur);
-            cur = cur < 0 ? 0 : cur;
+            cur = cur < 0 ? 0 : cur;// 排除子数组是以负数开头的，即子数组的前缀不能为负数
+            // 如  一个子数组  -4 5 6 2 -1 3 其中-4可以直接舍弃
         }
         return max;
     }
