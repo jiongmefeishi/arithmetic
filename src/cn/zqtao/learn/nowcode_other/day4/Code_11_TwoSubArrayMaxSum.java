@@ -2,7 +2,13 @@ package cn.zqtao.learn.nowcode_other.day4;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 两不相交子数组最大和
+ * 给定一个数组, 长度大于2, 找出不相交的两个子数组, 情况是很多的。
+ * 请返回这么多情况中,两个不相交子数组最大的和。例如:
+ *
+ * -1, 3, 4,-9, 1, 2
+ *
+ * 当两个不相交子数组为[3, 4]和[1, 2]时,可以得到最大的和为10.
  * @version: 1.0
  */
 public class Code_11_TwoSubArrayMaxSum {
@@ -84,9 +90,9 @@ public class Code_11_TwoSubArrayMaxSum {
             }
         }
         if (hasErr) {
-            System.out.println("23333333");
+            System.out.println("出错");
         } else {
-            System.out.println("66666666");
+            System.out.println("一切OK");
         }
     }
 }
