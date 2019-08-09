@@ -7,6 +7,9 @@ import java.util.LinkedList;
 /**
  * @auther: zqtao
  * @description:
+ * 小易有一个长度为n的整数序列, a_1. .., an。然后考虑在一个空序列b上进行n次以下操作:1、将ai放入b序列的末尾2、逆置b序列小易需要你计算输出操作n次之后的b序列。
+ *
+ * 输入描述:输入包括两行,第一行包括一个整数n(2 第二行包括n个整数ai(1 < a_i < 10~9),即序列a中的每个整数,以空格分割
  * @version: 1.0
  */
 public class Code_18_NReverse {
