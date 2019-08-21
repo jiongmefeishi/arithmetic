@@ -13,8 +13,14 @@ import java.util.Arrays;
  * 运用到了桶排序中的分桶的概念，但是它不是桶排序
  * 若有N个数，则准备N + 1 个桶
  * 找到N个数的最大值和最小值，0号位就放最小值，N 号位就放最大值
+ * 如 2 6 5 1
+ * 准备 5 个桶
+ * 0桶：1 5桶：6
+ *
+ * 中间必然存在一个空桶，设置空桶是为了排除(最大差值，一定来自相同桶)
+ *
  * <p>
- * 记录每个桶的最大值，最小值，以及这个桶是否存在数
+ * 遍历数组，元素进入桶后，只记录每个桶的最大值，最小值，以及这个桶是否存在数
  * <p>
  * 每向一个桶添加一个数，都更新这个桶的最大值、最小值、是否有数
  * <p>
@@ -65,13 +71,13 @@ public class Code_10_MaxGap {
      * 确认每一个数在桶中所应该处于哪个位置
      *
      * @param num   需要确认的数
-     * @param lenth 桶数量
+     * @param length 桶数量
      * @param min   最小值
      * @param max   最大值
      * @return
      */
-    public static int getBucketIndex(long num, long lenth, long min, long max) {
-        return (int) ((num - min) * lenth / (max - min));
+    public static int getBucketIndex(long num, long length, long min, long max) {
+        return (int) ((num - min) * length / (max - min));
     }
 
     // for test
