@@ -36,6 +36,10 @@ public class Code_08_HeapSort {
      *
      * @param arr
      * @param i   增加第 i 个元素为大根堆的节点
+     *
+     * 任意节点 i 它的左孩子 2*i + 1
+     *            它的右孩子2*i + 2
+     *            它的父节点(i-1)/2
      */
     public static void headInsert(int[] arr, int i) {
 
