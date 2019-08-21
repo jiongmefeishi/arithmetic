@@ -84,7 +84,7 @@ public class Code_28_LongestIncreasingSubsequences {
         }
 
         // 由辅助数组得到序列
-        int index = 0; // 记录最长子序列中最大都下标
+        int index = 0; // 记录最长子序列中最大的下标
         int maxLen = Integer.MIN_VALUE;// 记录最长子序列的长度
         for (int i = 0; i < helpLen.length; i++) {
             if (maxLen < helpLen[i]) {
@@ -109,7 +109,7 @@ public class Code_28_LongestIncreasingSubsequences {
      * 优化：上面算法时间复杂度 O(N^2)
      * 为了加速第一步求 helpLen[] 数组
      * 再增加一个辅助数组 ends[]
-     * ends[i] 含义: 长度为 i+1 的所以递增子序列的最小结尾
+     * ends[i] 含义: 长度为 i+1 的所有递增子序列的最小结尾
      *
      * arr   3 1 2 4 3
      *
@@ -135,7 +135,7 @@ public class Code_28_LongestIncreasingSubsequences {
         for (int i = 1; i < arr.length; i++) {
             L = 0;
             R = right;
-            while (L <= R) {
+            while (L <= R) { // 二分法在ends中寻找第一个 >= arr[i] 的数，更新
                 int mid = L + (R - L) / 2;
                 if (ends[mid] >= arr[i]) {
                     R = mid - 1;
