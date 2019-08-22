@@ -5,10 +5,10 @@ import java.util.Comparator;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 俄罗斯信封（俄罗斯套娃）
  * @version: 1.0
  */
-public class Code_29_ {
+public class Code_29_RussianDollEnvelopes {
 
     public static class Dot{
         public int w;
@@ -52,6 +52,7 @@ public class Code_29_ {
         System.out.println(Arrays.toString(dots));
 
         int[] ends = new int[es.length]; // ends[i] 含义：长度为 i+1 的所有递增子序列的最小结尾
+        ends[0] = dots[0].h;
         int L = 0;
         int R = 0;
         int mid = 0;
