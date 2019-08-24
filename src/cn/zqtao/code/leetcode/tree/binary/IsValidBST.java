@@ -1,7 +1,5 @@
 package cn.zqtao.code.leetcode.tree.binary;
 
-import com.sun.org.apache.regexp.internal.RE;
-
 /**
  * @auther: zqtao
  * @description: 验证二叉搜索树
