@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 /**
  * @auther: zqtao
- * @description:
+ * @description: 正数数组求最小不可能和
  * @version: 1.0
  */
 public class Code_33_SmallestUnFormedSum {
@@ -45,7 +45,7 @@ public class Code_33_SmallestUnFormedSum {
     }
 
     /**
-     * 动态规划
+     * 动态规划 dp[][]
      *
      * @param arr
      * @return dp row: sum j   col: arr[i]
@@ -71,27 +71,20 @@ public class Code_33_SmallestUnFormedSum {
 
         for (int i = 1; i < arr.length; i++) {
             for (int j = 1; j <= sum; j++) {
-//                if (dp[i - 1][j]) { // 上一个是true，下一个就是true
-//                    dp[i][j] = true;
-//                } else { // 上一个是false，寻找上一行的位置是否是true
-//                    int preSum = j - arr[i];
-//                    dp[i][j] = dp[i][preSum];
-//                }
-
                 if (j - arr[i] >= 0) { // 防止越界
                     dp[i][j] = dp[i - 1][j] || dp[i - 1][j - arr[i]];
                 } else {
                     dp[i][j] = dp[i - 1][j];
                 }
 
-                System.out.println("begin-----------------");
-                for (int m = 0; m < dp.length; m++) {
-                    for (int n = 0; n < dp[0].length; n++) {
-                        System.out.print(dp[m][n] + "\t");
-                    }
-                    System.out.println();
-                }
-                System.out.println("\n\n");
+//                System.out.println("begin-----------------");// 打印每一次dp[][]的填充
+//                for (int m = 0; m < dp.length; m++) {
+//                    for (int n = 0; n < dp[0].length; n++) {
+//                        System.out.print(dp[m][n] + "\t");
+//                    }
+//                    System.out.println();
+//                }
+//                System.out.println("end----------------\n\n");
             }
         }
 
@@ -103,9 +96,71 @@ public class Code_33_SmallestUnFormedSum {
         return sum + 1;
     }
 
+
+    /**
+     * 动态规划优化 dp[]
+     * 降维
+     */
+    public static int unformedSum3(int[] arr) {
+        if (arr == null || arr.length == 0)
+            return 1;
+
+        int sum = 0;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i != arr.length; i++) {
+            sum += arr[i];
+            min = Math.min(min, arr[i]);
+        }
+
+        boolean[] dp = new boolean[sum + 1];
+        dp[0] = true;
+        dp[arr[0]] = true;
+        for (int row = 1; row < arr.length; row++) {
+            for (int col = arr[row]; col <= sum; col++) {
+                dp[col] = dp[col - arr[row]] || dp[col];
+//                System.out.println(Arrays.toString(dp));
+            }
+        }
+
+        for (int i = min; i < dp.length; i++) {
+            if (!dp[i])
+                return i;
+        }
+
+        return sum + 1;
+    }
+
+    /**
+     * 进阶
+     * 正数数组中一定存在 1 这个正数，快速求出那个不可能的和
+     *
+     * 先排序，维护一个变量 range
+     * range 表示遍历到当前位置 1~range 范围内的数是可以加出来的和
+     *
+     * 当下一个数 大于 range 超过1 ，那么返回 range+1
+     */
+    public static int unformedSum4(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return 0;
+        }
+        Arrays.sort(arr);
+        int range = 0;
+        for (int i = 0; i != arr.length; i++) {
+            if (arr[i] > range + 1) {
+                return range + 1;
+            } else {
+                range += arr[i];
+            }
+        }
+        return range + 1;
+    }
+
+
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
+        int[] arr = {2,3,5};
         System.out.println(unformedSum1(arr));
         System.out.println(unformedSum2(arr));
+        System.out.println(unformedSum3(arr));
+        System.out.println(unformedSum4(arr));
     }
 }
