@@ -7,6 +7,8 @@ import java.util.Map;
 /**
  * @auther: zqtao
  * @description: topK问题
+ * 给定String类型数组arr， 给定整数 topK ,请严格按照排名顺序打印出现次数 前 topK名的字符串
+ *
  * 如果N个元素，时间复杂度可以达到O(NlogK)
  * @version: 1.0
  */
