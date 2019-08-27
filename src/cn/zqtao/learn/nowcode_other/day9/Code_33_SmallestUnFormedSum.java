@@ -114,10 +114,9 @@ public class Code_33_SmallestUnFormedSum {
 
         boolean[] dp = new boolean[sum + 1];
         dp[0] = true;
-        dp[arr[0]] = true;
-        for (int row = 1; row < arr.length; row++) {
-            for (int col = arr[row]; col <= sum; col++) {
-                dp[col] = dp[col - arr[row]] || dp[col];
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = sum; col >= arr[row]; col--) {
+                dp[col] = dp[col] || (col - arr[row] >= 0 ? dp[col - arr[row]] : false);
 //                System.out.println(Arrays.toString(dp));
             }
         }
@@ -133,10 +132,10 @@ public class Code_33_SmallestUnFormedSum {
     /**
      * 进阶
      * 正数数组中一定存在 1 这个正数，快速求出那个不可能的和
-     *
+     * <p>
      * 先排序，维护一个变量 range
      * range 表示遍历到当前位置 1~range 范围内的数是可以加出来的和
-     *
+     * <p>
      * 当下一个数 大于 range 超过1 ，那么返回 range+1
      */
     public static int unformedSum4(int[] arr) {
@@ -157,7 +156,7 @@ public class Code_33_SmallestUnFormedSum {
 
 
     public static void main(String[] args) {
-        int[] arr = {2,3,5};
+        int[] arr = {2, 3, 5};
         System.out.println(unformedSum1(arr));
         System.out.println(unformedSum2(arr));
         System.out.println(unformedSum3(arr));
