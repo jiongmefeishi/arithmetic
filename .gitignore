@@ -119,3 +119,6 @@ out/*
 out/production/arithmetic/cn/zqtao/code/leetcode/string/LongestPalindrome.class
 out/production/arithmetic/cn/zqtao/code/leetcode/string/LongestCommonPrefix.class
 .idea/codeStyles/codeStyleConfig.xml
+src/cn/zqtao/model/Main.java
+src/Main.java
+src/Main.java
