@@ -1,4 +1,4 @@
-package cn.zqtao.learn.nowcode_other.day910;
+package cn.zqtao.learn.nowcode_other.day10;
 
 /**
  * @auther: zqtao
