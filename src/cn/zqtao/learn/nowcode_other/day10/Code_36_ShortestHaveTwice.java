@@ -5,8 +5,6 @@ import java.util.Arrays;
 /**
  * @auther: zqtao
  * @description: 连续Str子串的最短字符串
- *
- *
  * @version: 1.0
  */
 public class Code_36_ShortestHaveTwice {
@@ -22,6 +20,7 @@ public class Code_36_ShortestHaveTwice {
     }
 
     // 求next[]
+    // next[] 求每一个字符的最长前缀和最长后缀的匹配数
     private static int endNextLength(char[] chars) {
 
         int[] next = new int[chars.length + 1];
