@@ -41,7 +41,7 @@ public class Code_04_3_LongestSumSubArrayLengthInPositiveArray {
             }
         }
 
-        // 第二步: 采用滑动窗口
+        // 第二步: 采用滑动窗口 ,求出最大长度
         int end = 0;
         int sum = 0;
         int resLen = 0;
@@ -69,8 +69,16 @@ public class Code_04_3_LongestSumSubArrayLengthInPositiveArray {
         // key: 第i位数下标  value: 第i位数开头的情况下累加最小和的右边界
         HashMap<Integer, Integer> ends = new HashMap<>();
 
-        // 以arr[i] 开头的情况下，往后累加，能得到的最小和是多少？存进 sums
-        // 以arr[i] 开头累加出最小和，边界时多少？存进ends
+        // 以arr[i] 开头的情况下 i~N-1，往后累加，能得到的最小和是多少？存进 sums
+        // 以arr[i] 开头 i~N-1 累加出最小和时，右边界是多少？存进ends
+
+        /*
+        那么怎么做到上面的需求呢？
+        当前是第i 个位置
+        sums[] 更新策略
+            sums[i+1] 中存进的是以 arr[i+1] 开头从 i+1~N-1 范围得到的最小累加和，
+            如果这个最小累加和是负数，那么sums[i]=arr[i]+sums[i+1]
+         */
 
 
         // 最后一个数的最小累加和，就是本身
@@ -106,9 +114,10 @@ public class Code_04_3_LongestSumSubArrayLengthInPositiveArray {
                 // 如以arr[0]开始的最小累加和到 i=7结束，即ends[0]=7。
                 // 那么下一个最小累加和就是i=8位置开始的，end=8
             }
-            sum -= end > i ? arr[i] : 0;
+            sum -= end > i ? arr[i] : 0; // > K 那么总sum-arr[i] 就是i+1~end 的最小累加和
             res = Math.max(res, end - i);
             end = Math.max(end, i + 1); // 如果没有走while循环end 需要更新为下一个数
+            // 更新滑动窗口边界，如 7 6 -1  7的最小累加和就是自己，end也是自己，需要更新end为 1
         }
         return res;
     }
