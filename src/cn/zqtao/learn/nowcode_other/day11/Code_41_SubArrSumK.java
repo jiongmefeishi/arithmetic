@@ -2,11 +2,18 @@ package cn.zqtao.learn.nowcode_other.day11;
 
 /**
  * @auther: zqtao
- * @description: 子数组累加和为定值K
+ * @description: 正子数组累加和为定值K
  * @version: 1.0
  */
 public class Code_41_SubArrSumK {
 
+    /**
+     * 滑动窗口
+     * 维护一个sum变量记录窗口内元素累加和
+     * 当sum < K, 窗口扩容 R++
+     * 当sum > K，窗口缩减 L++
+     * 当sum = K，记录子数组长度（窗口长度），同时缩减窗口容量 L++
+     */
     public static int maxSumK(int[] arr, int K) {
         if (arr == null || arr.length == 0) return 0;
 
