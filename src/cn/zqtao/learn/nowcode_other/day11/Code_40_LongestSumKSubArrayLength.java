@@ -1,11 +1,10 @@
 package cn.zqtao.learn.nowcode_other.day11;
 
-import java.security.Key;
 import java.util.HashMap;
 
 /**
  * @auther: zqtao
- * @description: 子数组累加和 K
+ * @description: 正负零子数组累加和为 K的最长子数组长度
  * @version: 1.0
  */
 public class Code_40_LongestSumKSubArrayLength {
