@@ -42,7 +42,7 @@ public class Code_00_BubbleSort {
         int maxValue = 100;
 
         for (int i = 0; i < testTime; i++) {
-            int[] randomArray = generateRandomArray(maxSize, maxValue);
+            int[] randomArray = generateRandomArray(maxSize, maxValue, true);
             int[] arr1 = copyArray(randomArray);
             int[] arr2 = copyArray(randomArray);
 

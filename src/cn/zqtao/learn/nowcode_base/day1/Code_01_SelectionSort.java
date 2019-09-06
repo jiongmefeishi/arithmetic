@@ -56,7 +56,7 @@ public class Code_01_SelectionSort {
         int maxValue = 100;
 
         for (int i = 0; i < testTime; i++) {
-            int[] randomArr = ArraySortModel.generateRandomArray(maxSize, maxValue);
+            int[] randomArr = ArraySortModel.generateRandomArray(maxSize, maxValue, true);
             int[] arr1 = ArraySortModel.copyArray(randomArr);
             int[] arr2 = ArraySortModel.copyArray(randomArr);
 

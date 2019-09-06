@@ -13,15 +13,20 @@ public class ArraySortModel {
         Arrays.sort(arr);
     }
 
-    // for test : 随机样本产生器
-    public static int[] generateRandomArray(int maxSize, int maxValue) {
+    // for test : 随机样本产生器 boolean needNegativeNumber: 是否需要产生负数
+    public static int[] generateRandomArray(int maxSize, int maxValue, boolean needNegativeNumber) {
 
         // 随机数组长度，随机长度
         int[] arr = new int[(int) (Math.random() * (maxSize + 1))];
         // 随机数据
         for (int i = 0; i < arr.length; i++) {
-            // 两个随机数相减，可以随机出负数
-            arr[i] = (int) (Math.random() * (maxValue + 1)) - (int) (Math.random() * (maxValue + 1));
+
+            if (needNegativeNumber) {
+                // 两个随机数相减，可以随机出负数
+                arr[i] = (int) (Math.random() * (maxValue + 1)) - (int) (Math.random() * (maxValue + 1));
+            } else {
+                arr[i] = (int) (Math.random() * (maxValue + 1));
+            }
         }
         return arr;
     }
