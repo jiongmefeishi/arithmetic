@@ -1,6 +1,6 @@
 package cn.zqtao.learn.nowcode_base.day7;
 
-import cn.zqtao.learn.nowcode_base.model.MatrixModel;
+import cn.zqtao.model.MatrixModel;
 
 /**
  * @auther: zqtao

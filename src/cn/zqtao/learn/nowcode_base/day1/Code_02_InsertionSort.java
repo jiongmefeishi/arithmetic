@@ -1,6 +1,6 @@
 package cn.zqtao.learn.nowcode_base.day1;
 
-import cn.zqtao.learn.nowcode_base.model.ArraySortModel;
+import cn.zqtao.model.ArraySortModel;
 
 import java.util.Arrays;
 

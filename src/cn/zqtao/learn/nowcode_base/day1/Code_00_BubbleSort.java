@@ -2,7 +2,7 @@ package cn.zqtao.learn.nowcode_base.day1;
 
 import java.util.Arrays;
 
-import static cn.zqtao.learn.nowcode_base.model.ArraySortModel.*;
+import static cn.zqtao.model.ArraySortModel.*;
 
 /**
  * @auther: zqtao

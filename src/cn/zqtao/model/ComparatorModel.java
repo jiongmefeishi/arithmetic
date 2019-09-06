@@ -1,4 +1,4 @@
-package cn.zqtao.learn.nowcode_base.model;
+package cn.zqtao.model;
 
 import java.util.Comparator;
 
