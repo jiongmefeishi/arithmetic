@@ -2,7 +2,6 @@ package cn.zqtao.zcy_chapter.chapter_9_others;
 
 public class Problem_07_ReservoirSampling {
 
-	// һ���򵥵��������������һ�����������ǲ���
 	public static int rand(int max) {
 		return (int) (Math.random() * max) + 1;
 	}
@@ -13,11 +12,11 @@ public class Problem_07_ReservoirSampling {
 		}
 		int[] res = new int[Math.min(k, max)];
 		for (int i = 0; i != res.length; i++) {
-			res[i] = i + 1; // ǰk����ֱ�ӽ�����
+			res[i] = i + 1;
 		}
 		for (int i = k + 1; i < max + 1; i++) {
-			if (rand(i) <= k) { // ����i����������
-				res[rand(k) - 1] = i; // i�����������е�һ��
+			if (rand(i) <= k) {
+				res[rand(k) - 1] = i; 
 			}
 		}
 		return res;
