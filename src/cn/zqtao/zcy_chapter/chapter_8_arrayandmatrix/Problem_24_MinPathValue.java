@@ -14,7 +14,7 @@ public class Problem_24_MinPathValue {
 		int[][] map = new int[m.length][m[0].length];
 		map[0][0] = 1;
 		Queue<Integer> rQ = new LinkedList<Integer>();
-		Queue<Integer> cQ = new LinkedList<Integer>();
+		Queue<Integer> cQ = new LinkedList<>();
 		rQ.add(0);
 		cQ.add(0);
 		int r = 0;
