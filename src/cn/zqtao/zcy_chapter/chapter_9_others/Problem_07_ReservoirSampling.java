@@ -16,7 +16,7 @@ public class Problem_07_ReservoirSampling {
 		}
 		for (int i = k + 1; i < max + 1; i++) {
 			if (rand(i) <= k) {
-				res[rand(k) - 1] = i; 
+				res[rand(k) - 1] = i;
 			}
 		}
 		return res;
