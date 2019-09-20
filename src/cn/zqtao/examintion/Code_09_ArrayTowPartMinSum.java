@@ -36,11 +36,11 @@ public class Code_09_ArrayTowPartMinSum {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,1,1,999};
-        System.out.println(method( arr));
-        int[] arr2 = {2,4,5,6,9};
+        int[] arr = {1, 1, 1, 999};
+        System.out.println(method(arr));
+        int[] arr2 = {2, 4, 5, 6, 9};
         System.out.println(method(arr2));
-        int[] arr3 = {2,2,2,2};
+        int[] arr3 = {2, 2, 2, 2};
         System.out.println(method(arr3));
     }
 }
