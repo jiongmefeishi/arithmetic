@@ -11,6 +11,8 @@ public class Code_12_PrefectSequence {
      * 维护一个变量 sum 表示窗口内每一个元素的和
      */
     public static int prefectSeq(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+
         int sum = 0;
         int L = 0;
         int R = 0;
