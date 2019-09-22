@@ -1,4 +1,4 @@
-package cn.zqtao;
+package cn.zqtao.examintion;
 
 /**
  * 完美序列
