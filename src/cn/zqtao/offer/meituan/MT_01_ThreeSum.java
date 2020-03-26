@@ -3,7 +3,7 @@ package cn.zqtao.offer.meituan;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class meituan_01_ThreeSum {
+public class MT_01_ThreeSum {
 
     public static Long method(int[] arr1, int[] arr2) {
         Arrays.sort(arr1);
@@ -31,9 +31,7 @@ public class meituan_01_ThreeSum {
         } else {
             return sum2;
         }
-
     }
-
 
     public static void main(String[] args) {
 
