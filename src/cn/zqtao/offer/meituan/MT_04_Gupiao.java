@@ -2,7 +2,7 @@ package cn.zqtao.offer.meituan;
 
 /**
  * @auther: zqtao
- * @description: 股票
+ * @description: 股票 k=1
  * @version: 1.0
  */
 public class MT_04_Gupiao {
@@ -75,5 +75,7 @@ public class MT_04_Gupiao {
         }
         return dp_i_0;
     }
+
+
 
 }
