@@ -37,11 +37,6 @@ class MT_05_FullPermutation {
     public static void main(String[] args) {
         int[] arr = {1,2,3};
         List<List<Integer>> permute = permute(arr);
-        for (List<Integer> list: permute) {
-            for (Integer i : list) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(permute);
     }
 }
