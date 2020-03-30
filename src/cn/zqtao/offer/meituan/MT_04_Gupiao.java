@@ -76,7 +76,4 @@ public class MT_04_Gupiao {
         return dp_i_0;
     }
 
-
-
-
 }
