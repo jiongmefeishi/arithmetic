@@ -26,7 +26,7 @@ public class Code_07_QuickSort {
             // 随机选取数组中的一个数和最后一个数进行交换作为参考点
             swap(arr, L + (int) Math.random() * (R - L + 1), R);
 
-            int[] p = partition2(arr, L, R);
+            int[] p = partition(arr, L, R);
             // 分治
             // 左半部分递归排序
             quickSort(arr, L, p[0] - 1);
@@ -78,7 +78,8 @@ public class Code_07_QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 6, 5, 5, 8, 9, 2, 2, 2, 9, 11};
+//        int[] arr = {3, 6, 5, 5, 8, 9, 2, 2, 2, 9, 11};
+        int[] arr = {3,2};
         quickSort(arr);
         System.out.println(Arrays.toString(arr));
     }
